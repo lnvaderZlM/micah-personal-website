@@ -1,0 +1,1 @@
+export const textAccentDarkToggle = "text-accent-light dark:text-accent-dark";
