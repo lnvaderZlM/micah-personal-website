@@ -13,14 +13,22 @@ export interface Media {
   mime: string;
   size: number;
 }
+
+export type Skill = {
+  id: number;
+  Name: string;
+}
 export type Work = {
   id: number;
   Title: string;
   Teaser: Media;
+  Hero: Media;
   start: string;
   end: string;
   Content: object;
-  Slug: string;
+  slug: string;
+  Company: string;
+  skills: Skill[];
 }
 
 export type WorkContainer = {
@@ -28,17 +36,18 @@ export type WorkContainer = {
 }
 
 export const WorkTeaser = ({work}:WorkContainer) => {
-  console.log(work);
   return (
-    <Link href={`/work/${work.slug}`} className="flex-1 text-center">
+    <Link href={`/work/${work.slug}`} className="sm:text-center p-4 rounded-sm flex flex-row items-center gap-4 sm:gap-2 sm:flex-col border border-solid 
+      border-border-light hover:border-border-hover-light
+      dark:border-border-dark dark:hover:border-border-hover-dark dark:hover:bg-border-bg-hover-dark">
         {/* work icon, bordered, with title, and hover state*/}
         { work.Teaser && 
           <Image
-            src={`${process.env.NEXT_PUBLIC_STRAPI_URL}${work.Teaser.url}`}
+            src={`${work.Teaser.url}`}
             width="80"
             height="80"
             alt={work.Teaser.alternativeText ?? `${work.Title} teaser`}
-            className="m-auto pb-1"
+            className="sm:m-auto pb-1 rounded-lg w-10 sm:w-20"
           />
         }
         <h4>{work.Title}</h4>

@@ -23,13 +23,13 @@ const Header = () => {
     <header className="justify-start text-center flex-col flex items-center relative max-w-7xl px-4 md:px-24 lg:px-42 py-8 md:py-12 mx-auto">
       <nav className="flex items-center gap-8">
         <ul className="flex items-center justify-between text-xl gap-8">
-          <Link href="/">
+          <Link href="/" className="hover:text-border-hover-light dark:hover:text-border-hover-dark">
             Home
           </Link>
-          <Link href="/about">
+          <Link href="/about" className="hover:text-border-hover-light dark:hover:text-border-hover-dark">
             About Me
           </Link>
-          <Link href="/resume">
+          <Link href="/MicahAlconcel.pdf" target="_blank" className="hover:text-border-hover-light dark:hover:text-border-hover-dark">
             My Resume
           </Link>
         </ul>
@@ -46,7 +46,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col pb-4`}
       >
         <Header/>
         {children}

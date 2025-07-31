@@ -3,8 +3,12 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --color-accent: #005FCC;
+  --color-divider: #E0E0E0;
+  --color-border: #333333;
   --color-accent-light: #005FCC;
   --color-divider-light: #E0E0E0;
+  --color-border-light: #333333;
 }
 
 @theme inline {
@@ -16,14 +20,26 @@
   --color-accent-dark: var(--color-accent-dark);
   --color-background-light: var(--color-background-light);
   --color-background-dark: var(--color-background-dark);
+
+  --color-border-light: #CCCCCC;
+  --color-border-hover-light: #0077B6;
+  --color-border-bg-hover-light: #F0F8FF;
+
+  --color-border-dark: #333333;
+  --color-border-hover-dark: #00B4D8;
+  --color-border-bg-hover-dark: #1E1E1E;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #121212;
     --foreground: #F5F5F5;
+    --color-accent: #00B4D8;
+    --color-divider: #333333;
+    --color-border: #333333;
     --color-accent-dark: #00B4D8;
     --color-divider-dark: #333333;
+    --color-border-dark: #333333;
   }
 }
 
@@ -32,3 +48,12 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+p a {
+  color: var(--color-accent);
+}
+
+/* broken in tailwind v4 atm */
+/*.theme-button-colors {
+  @apply border border-solid border-border-light hover:border-hover-light dark:border-border-dark dark:hover:border-hover-dark;
+}*/

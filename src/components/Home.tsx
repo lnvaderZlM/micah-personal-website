@@ -12,12 +12,12 @@ export default function Homepage({data}:HomeProps) {
     <HeroLayout align="text-center items-center">
       <ProfileImage
         imgSrc="/about_hero.jpg"
-        alt="about me"
+        altText="about me"
       />
         <p className="w-full text-3xl mb-8 pt-6">
           {`Hey! I'm Micah Alconcel, a Seattle-based web developer with experience building websites in Drupal and React/Next.js. Here's a portfolio of some of my work!`}
         </p>
-        <div className="flex">
+        <div className="flex flex-wrap flex-col sm:flex-row w-full gap-4 sm:justify-center">
           {data.map(work => {
             return (
               <WorkTeaser key={work.id} work={work}/>
