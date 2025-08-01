@@ -29,6 +29,8 @@ export type Work = {
   slug: string;
   Company: string;
   skills: Skill[];
+  bottom_images: Media[];
+  work_type: string;
 }
 
 export type WorkContainer = {
@@ -50,7 +52,7 @@ export const WorkTeaser = ({work}:WorkContainer) => {
             className="sm:m-auto pb-1 rounded-lg w-10 sm:w-20"
           />
         }
-        <h4>{work.Title}</h4>
+        <h4 className={work.work_type == 'Work' ? "font-bold" : ""}>{work.Title}</h4>
     </Link>
   );
 };

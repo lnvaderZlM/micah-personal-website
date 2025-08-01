@@ -6,7 +6,7 @@ type WorkPageProps = {
 };
 
 async function getWorkBySlug(slug:string) {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_API_URL}/works?filters[slug][$eq]=${slug}&populate[0]=Hero&populate[1]=skills`, {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_API_URL}/works?filters[slug][$eq]=${slug}&populate[0]=Hero&populate[1]=skills&populate[2]=bottom_images`, {
     headers: {
       Authorization: `Bearer ${process.env.NEXT_PUBLIC_STRAPI_API_TOKEN}`,
     },
