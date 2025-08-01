@@ -23,8 +23,8 @@ export type Work = {
   Title: string;
   Teaser: Media;
   Hero: Media;
-  start: string;
-  end: string;
+  Start: string;
+  End: string;
   Content: object;
   slug: string;
   Company: string;
