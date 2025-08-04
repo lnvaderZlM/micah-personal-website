@@ -64,6 +64,7 @@ export const WorkTeaser = ({work}:WorkContainer) => {
           blocks={{
             paragraph: ({ children }) => <p className="text-neutral900 mb-4 text-lg">{children}</p>,
             link: ({ children, url }) => <Link href={url} target="_blank">{children}</Link>,
+            list: ({ children }) => <ul className="text-lg list-disc pl-8 mb-4">{children}</ul>,
           }}
         />
       }

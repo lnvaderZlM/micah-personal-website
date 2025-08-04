@@ -17,7 +17,7 @@ export default function Homepage({data}:HomeProps) {
         <p className="w-full text-3xl mb-8 pt-6">
           {`Hey! I'm Micah Alconcel, a Seattle-based web developer with experience building websites in Drupal and React/Next.js. Here's a portfolio of some of my work!`}
         </p>
-        <div className="flex flex-wrap flex-col sm:flex-row w-full gap-4 sm:justify-center">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 w-full gap-4">
           {data.map(work => {
             return (
               <WorkTeaser key={work.id} work={work}/>
