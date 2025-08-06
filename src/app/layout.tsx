@@ -20,9 +20,9 @@ export const metadata: Metadata = {
 
 const Header = () => {
   return (
-    <header className="justify-start text-center flex-col flex items-center relative max-w-7xl px-4 md:px-24 lg:px-42 py-8 md:py-12 mx-auto">
+    <header className="justify-start text-center flex-col flex items-center relative px-4 md:px-24 lg:px-42 py-8 md:py-12 mx-auto bg-border-bg-hover-light dark:bg-border-bg-hover-dark w-full mb-8">
       <nav className="flex items-center gap-8">
-        <ul className="flex items-center justify-between text-xl gap-8">
+        <ul className="flex items-center justify-between text-xl gap-8 font-bold">
           <Link href="/" className="hover:text-border-hover-light dark:hover:text-border-hover-dark">
             Home
           </Link>
