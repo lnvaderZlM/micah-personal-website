@@ -20,8 +20,6 @@ export default function About() {
 				{`When I’m not coding, there’s a good chance you’ll find me at an arcade, playing rhythm games.
 				If it has flashing lights, a complicated control scheme, and music blasting at full volume - I’m in.`}
 			</p>
-			{/*Still trying to figure out if ‘acting your age’ is a real thing, or just bad advice.
-			Until I figure it out, I’ll be here building things, drawing stuff, and getting overly invested in fictional characters.*/}
 		</HeroLayout>
 	)
 }
